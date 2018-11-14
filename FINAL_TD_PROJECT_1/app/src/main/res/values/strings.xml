@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Augmented Images</string>
+    <string name="fit_image_to_scan">Fit image to scan</string>
+    <string name="int__web_view_act__url">1</string>
+
+    <string name="td_bank_Accounts_url">https://www.td.com/ca/en/personal-banking/products/bank-accounts/</string>
+    <string name="td_credit_Cards_url">https://www.td.com/ca/en/personal-banking/products/credit-cards/</string>
+    <string name="td_borrowing_url">https://www.td.com/ca/en/personal-banking/products/borrowing/</string>
+    <string name="td_investment_url">https://www.td.com/ca/en/personal-banking/products/saving-investing/</string>
+    <string name="td_smallbusiness_url">https://www.tdcanadatrust.com/products-services/banking/apply-index.jsp</string>
+
+    <string name="choose">Choose</string>
+</resources>
+

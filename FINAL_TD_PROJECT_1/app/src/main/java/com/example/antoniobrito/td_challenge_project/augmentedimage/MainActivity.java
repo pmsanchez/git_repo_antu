@@ -166,6 +166,7 @@ public class MainActivity extends AppCompatActivity {
             if (augmentedImage.getTrackingState() == TrackingState.TRACKING)
                 if (augmentedImage.getName().equals(picTd)) {
                     node.setImage(augmentedImage);
+                    messageSnackbarHelper.showError(this, "AR experience started. enjoy!!.");
                     arSceneView.getScene().addChild(node);
                 }
         }

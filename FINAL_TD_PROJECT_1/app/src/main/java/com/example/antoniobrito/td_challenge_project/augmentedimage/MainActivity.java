@@ -1,5 +1,7 @@
 package com.example.antoniobrito.td_challenge_project.augmentedimage;
 
+import android.animation.ObjectAnimator;
+import android.animation.PropertyValuesHolder;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -8,6 +10,8 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.ar.core.ArCoreApk;
@@ -35,24 +39,23 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.Collection;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity  {
     private static final String TAG = MainActivity.class.getSimpleName();
 
     private final String picTd = "td_card_7";
-
     private ArSceneView arSceneView;
-
     private boolean installRequested;
-
     private Session session;
     private final SnackbarHelper messageSnackbarHelper = new SnackbarHelper();
 
     private boolean shouldConfigureSession = false;
     private AugmentedImageNode node;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
 
         arSceneView = findViewById(R.id.surfaceview);

@@ -1,9 +1,12 @@
 package com.example.antoniobrito.td_challenge_project.augmentedimage;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.VibrationEffect;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.Toast;
@@ -26,6 +29,8 @@ import com.google.ar.core.exceptions.UnavailableSdkTooOldException;
 import com.google.ar.core.exceptions.UnavailableUserDeclinedInstallationException;
 import com.google.ar.sceneform.ArSceneView;
 import com.google.ar.sceneform.FrameTime;
+import android.os.Vibrator;
+
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -165,9 +170,10 @@ public class MainActivity extends AppCompatActivity {
 
             if (augmentedImage.getTrackingState() == TrackingState.TRACKING)
                 if (augmentedImage.getName().equals(picTd)) {
+
                     node.setImage(augmentedImage);
-                    messageSnackbarHelper.showError(this, "AR experience started. Let's enjoy !!.");
                     arSceneView.getScene().addChild(node);
+                    vibrate(20);
                 }
         }
     }
@@ -206,5 +212,10 @@ public class MainActivity extends AppCompatActivity {
         return null;
     }
 
+    public void vibrate(int duration)
+    {
+        Vibrator vibs = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+        vibs.vibrate(duration);
+    }
 
 }

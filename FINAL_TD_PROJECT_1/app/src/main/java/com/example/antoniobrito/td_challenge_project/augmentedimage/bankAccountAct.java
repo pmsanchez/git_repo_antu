@@ -18,7 +18,7 @@ public class bankAccountAct extends AppCompatActivity {
         Intent intent =null;
         switch (view.getId())
         {
-            case R.id.chequings:
+            case R.id.btnChequings  :
                 intent = new Intent(this,bankaccountOptionsActivity.class);
                 break;
         }

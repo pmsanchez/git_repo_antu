@@ -3,74 +3,86 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/llRoot"
-    android:layout_width="380dp"
-    android:layout_height="500dp"
-    android:gravity="center"
+    android:layout_width="400dp"
+    android:layout_height="600dp"
+    android:gravity="top|bottom|center"
     android:orientation="vertical"
     android:padding="4dp"
     android:visibility="visible">
 
 
-    <LinearLayout
-        android:layout_width="380dp"
-        android:layout_height="100dp"
-        android:orientation="vertical"
-        android:visibility="visible">
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="390dp"
+        android:layout_height="600dp">
 
         <ImageView
             android:id="@+id/btnChequings"
-            android:layout_width="131dp"
-            android:layout_height="match_parent"
-            android:onClick="selectBankAccount"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="38dp"
+            android:layout_marginEnd="63dp"
+            android:layout_marginBottom="26dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnRelatedServ"
+            app:layout_constraintEnd_toStartOf="@+id/btnElectronicBank"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/chequings" />
-    </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="380dp"
-        android:layout_height="100dp"
-        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/btnElectronicBank"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="48dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnUsDollar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnChequings"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/electronic" />
+
+        <ImageView
+            android:id="@+id/btnRelatedServ"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="41dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnSavings"
+            app:layout_constraintEnd_toStartOf="@+id/btnUsDollar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnChequings"
+            app:srcCompat="@drawable/relatedserv" />
 
         <ImageView
             android:id="@+id/btnSavings"
-            android:layout_width="134dp"
-            android:layout_height="wrap_content"
+            android:layout_width="119dp"
+            android:layout_height="170dp"
+            android:layout_marginStart="38dp"
+            android:layout_marginEnd="39dp"
+            android:layout_marginBottom="65dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/moneyBag"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnRelatedServ"
             app:srcCompat="@drawable/savings" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="380dp"
-        android:layout_height="100dp"
-        android:orientation="vertical">
 
         <ImageView
-            android:id="@+id/imageView9"
-            android:layout_width="138dp"
-            android:layout_height="wrap_content"
+            android:id="@+id/btnUsDollar"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="109dp"
+            app:layout_constraintBottom_toTopOf="@+id/moneyBag"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnRelatedServ"
+            app:layout_constraintTop_toBottomOf="@+id/btnElectronicBank"
             app:srcCompat="@drawable/usdollar" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="380dp"
-        android:layout_height="100dp"
-        android:orientation="vertical">
 
         <ImageView
-            android:id="@+id/imageView10"
-            android:layout_width="139dp"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/relatedserv" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="380dp"
-        android:layout_height="100dp"
-        android:orientation="vertical">
-
-        <ImageView
-            android:id="@+id/imageView11"
-            android:layout_width="142dp"
-            android:layout_height="wrap_content"
-            app:srcCompat="@drawable/electronic" />
-    </LinearLayout>
-
+            android:id="@+id/moneyBag"
+            android:layout_width="207dp"
+            android:layout_height="228dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnSavings"
+            app:layout_constraintTop_toBottomOf="@+id/btnUsDollar"
+            app:srcCompat="@drawable/money_bag" />
+    </android.support.constraint.ConstraintLayout>
 </LinearLayout>

@@ -9,6 +9,8 @@
     <string name="td_investment_url">https://www.td.com/ca/en/personal-banking/products/saving-investing/</string>
     <string name="td_smallbusiness_url">https://www.tdcanadatrust.com/products-services/banking/apply-index.jsp</string>
 
+    <string name="check_account_definition">A deposit account that allows          withdrawals and deposits</string>
+
     <string name="choose">Choose</string>
 </resources>
 

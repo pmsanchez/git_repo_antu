@@ -128,9 +128,9 @@ public class bankAccountAct extends AppCompatActivity implements View.OnDragList
                     float X = dragEvent.getX();
                     float Y = dragEvent.getY();
                     Intent intent =null;
-                    intent = new Intent(this,bankaccountOptionsActivity.class);
+                    intent = new Intent(this,chequingAccActivity.class);
                     startActivity(intent);
-                    finish();
+                    // finish();
                 }
                 if ( vItem2.getId() == R.id.btnElectronicBank)
                 {
